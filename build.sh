@@ -42,6 +42,7 @@ build() {
   cp -R $src_dir $build_dir
   find $build_dir -type f -exec sed -i s/%VERSION%/$version/g {} \;
   cp $selected_file $build_dir/usr/bin/chromedriver
+  chmod +x $build_dir/usr/bin/chromedriver
 }
 
 clean() {
