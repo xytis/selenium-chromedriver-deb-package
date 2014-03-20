@@ -25,12 +25,11 @@ make_dirs() {
 download() {
   echo "Downloading chrome driver..."
   zip=chromedriver_linux64.zip
-  selected_file=$dest_dl_dir/$zip
+  downloaded_file=$dest_dl_dir/$zip
+  selected_file=$dest_dl_dir/chromedriver
   if [ ! -f $selected_file ] ; then
-    wget -nv http://chromedriver.storage.googleapis.com/$version/$zip -O $selected_file || exit 1
-    rm -f $dest_dl_dir/chromedriver
-    unzip $selected_file -d $dest_dl_dir
-    selected_file=$dest_dl_dir/chromedriver
+    wget -nv http://chromedriver.storage.googleapis.com/$version/$zip -O $downloaded_file || exit 1
+    unzip $downloaded_file -d $dest_dl_dir
   else
     echo "  File already downloaded."
   fi
