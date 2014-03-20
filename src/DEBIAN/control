@@ -3,6 +3,5 @@ Version: %VERSION%
 Section: devel
 Priority: extra
 Architecture: all
-Depends:
 Maintainer: Vytis Valentinavičius <vytis@nolife4life.org>
 Description: Selenium chromedriver binary
